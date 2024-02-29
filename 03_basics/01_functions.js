@@ -21,3 +21,26 @@ function loginUserMessage(username="sam") {
     return `${username} just logged In`
 }
 console.log(loginUserMessage("Adil"));
+function calculatedCarPrice(...num1) {
+    return num1
+    
+}
+console.log(calculatedCarPrice(200,400,500));
+const user={
+
+    username:"Adil",
+    price:199
+}
+function handelobject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+//handelobject(user)
+handelobject({
+    username:"sam",
+    price:399
+})
+const myNewArray=[200,400,100,600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue([200,400,500,1000]));
