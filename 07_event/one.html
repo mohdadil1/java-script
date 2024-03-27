@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Event</title>
+</head>
+<body style="background-color: #414141; color:aliceblue">
+<h2>Amazing photos</h2>
+<div>
+    <ul id="images">
+        <li><img width="200px" id="photoshop"  src="https://images.pexels.com/photos/20789411/pexels-photo-20789411.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="photoshop"></li>
+        <li><img width="200px" id="forest" src="https://images.pexels.com/photos/20789407/pexels-photo-20789407.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="my" ></li>
+        <li><img width="200px" id="summer" src="https://images.pexels.com/photos/20789406/pexels-photo-20789406.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><img width="200px" id="shadi" src="https://images.pexels.com/photos/20789349/pexels-photo-20789349/free-photo-of-2020.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+    </ul>
+</div>    
+</body>
+<script>
+    document.getElementById('shadi').onclick=function(){
+        alert('last photo is clicked');
+    }
+    // attachEvent
+    // jQuery
+    // type,timestamp,defaultPrevnted
+    // target,toElement,srcElement,currentTarget,
+    // clientX,clientY,screenX,screenY,
+    // altkey, ctrlkey,shiftkey,keycode
+    // document.getElementById('summer').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+    // document.getElementById('photoshop').addEventListener('click',function(e){
+    //     console.log('first clicked');
+    //     e.stopPropagation();
+
+    // },false)
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log('google is clicked');
+        
+    // })
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id);
+            let removeit=e.target.parentNode
+            console.log(removeit);
+            removeit.remove();
+        }
+    })
+</script>
+</html>
