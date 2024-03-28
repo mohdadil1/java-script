@@ -7,12 +7,13 @@
 </head>
 <body>
     <h1>Learning coding</h1>
+   
     
 </body>
 <script>
-    setTimeout(function(){
-        document.querySelector('h1').innerHTML="JavaScript"
-    },2000)
-    
+     function change (e){
+        document.querySelector('h1').innerHTML=e;
+    }
+    setTimeout(change,2000,"javaScript");
 </script>
 </html>
