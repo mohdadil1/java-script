@@ -1,0 +1,28 @@
+body{
+    background-color: #212121;
+}
+
+nav{
+    font: 1em sans-serif;
+    font-style: italic;
+    
+}
+h1{
+    padding-left: 10px;
+    margin-left: auto;
+}
+
+button{
+    background-color: white;
+    margin-left: 10px;
+    font: 1em ;
+    font-family: Calibri;
+    font-style: oblique;
+    font-style: italic;
+    border-radius: 25px;
+    width: 100px;
+    height: 25px;
+    /* border-style:none */
+
+
+}
