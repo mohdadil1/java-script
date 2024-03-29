@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and sync</title>
+</head>
+<body>
+    <h1>Learning coding</h1>
+     <div class="bu"> 
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</div>
+    
+</body>
+<script>
+ let intveralId;
+
+   document.querySelector('.bu').addEventListener('click',function(e){
+        if(e.target.id==='start'){
+            
+             intveralId=setInterval(set,1000,"javaScript",e);
+            
+             
+            // console.log(e.target);  
+        }
+        else if(e.target.id==='stop'){
+            clearInterval(intveralId)
+            
+            const st=document.getElementById('start');
+            st.removeAttribute('disabled','');
+            intveral=null;
+            
+
+        }
+    })
+     const set=function  (e,a){
+    console.log(e);
+    a.target.setAttribute('disabled','');  
+ 
+
+    }
+    
+    //
+</script>
+</html>
