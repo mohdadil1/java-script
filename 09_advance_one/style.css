@@ -1,0 +1,8 @@
+
+    .container {
+        width: 80%;
+        margin: 0 auto; /* Centers the container horizontally */
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
+    }
